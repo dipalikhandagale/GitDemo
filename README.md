@@ -1,1 +1,2 @@
 # GitDemo
+This allows remote repository to accept a safer non-fast-forward push. This can cause the remote repository to lose commits; use it with care. This can prevent from losing unknown changes from other people on the remote. It checks if the server branch points to the same commit as the remote-tracking branch (known changes). If yes, a force push will be performed. Otherwise it will be rejected. Since git does not have remote-tracking tags, tags cannot be overwritten using this option. This passes --force-with-lease option of git push command.
